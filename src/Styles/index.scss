@@ -1,0 +1,40 @@
+$crossword-item-size: 50px;
+$crossword-column-count: 9;
+$crossword-row-count: 9;
+
+$active-color: rgb(172, 218, 255);
+
+.board-container{
+    position: relative;
+    background: white;
+}
+
+.board {
+    width: ($crossword-item-size * $crossword-column-count);
+	height: ($crossword-item-size * $crossword-row-count);
+    background: transparent;
+    display: grid; 
+    grid-template: repeat(9,11.111111111111%) / repeat(9,11.111111111111%);
+  }
+
+.cell {
+    border: 1px solid black;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cell:nth-child(3n+3){
+    border-right: 4px solid black;
+}
+
+// Active cell to input number
+.cell:focus{
+    background: $active-color;
+    outline: transparent;
+}
+
+// Active cell based on keyboard input
+.active{
+    background: orange;
+}
