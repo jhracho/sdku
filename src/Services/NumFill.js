@@ -21,24 +21,23 @@ export const NumFill = (event) =>{
             var num = start - 1;
         }
 
-        else if (event.which === 38){
+        else if (event.which === 38 && start > 9){
             var num = start - numRows;
-            if (num < 1){                
-                num = start - (numRows*(numRows-1));
-            }
         }
 
         else if (event.which === 39){
             var num = start + 1;
         }
 
-        else{
+        else if (event.which === 40 && start + numRows <= 81){
             var num = start + numRows;
-            if (num < 1){                
-                num = start + (numRows*(numRows-1));
-            }
         }
+
+        else{
+            var num = start;
+        }
+
         var test = 'c' + num;
-        document.getElementById(test).focus();
+        document.getElementById(test).focus();   //TODO: move this into all the if statements above
     }   
 };
