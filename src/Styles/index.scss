@@ -32,6 +32,24 @@ $active-color: rgb(172, 218, 255);
     outline: transparent;
 }
 
+// Changing pre-filled cell
+.prefill{
+    background: rgb(224, 224, 224);
+}
+
+.prefill::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+  
+.prefill:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+}
+
+.prefill::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+}
+
 // Setting Right Border
 .cell:nth-child(3n+3){
     border-right: 0.2em solid black;
