@@ -27,6 +27,35 @@ $active-color: rgb(172, 218, 255);
     background: transparent;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
+}
+
+// Setting Right Border
+.cell:nth-child(3n+3){
+    border-right: 0.2em solid black;
+}
+
+$left-border: c1, c10, c19, c28, c37, c46, c55, c64, c73;
+@each $id in $left-border{
+    ##{$id}{
+        border-left: 0.2em solid black;
+    }
+}
+
+$top-border: c1, c2, c3, c4, c5, c6, c7, c8, c9,
+c28, c29, c30, c31, c32, c33, c34, c35, c36,
+c55, c56, c57, c58, c59, c60, c61, c62, c63;
+@each $id in $top-border{
+    ##{$id}{
+        border-top: 0.2em solid black;
+    }
+}
+
+$bottom-border:  c73, c74, c75, c76, c77, c78, c79, c80, c81;
+@each $id in $bottom-border{
+    ##{$id}{
+        border-bottom: 0.2em solid black;
+    }
 }
 
 // Active cell to input number
