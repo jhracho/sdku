@@ -17,15 +17,16 @@ $active-color: rgb(172, 218, 255);
     grid-template: repeat(9,11.111111111111%) / repeat(9,11.111111111111%);
   }
 
+.cell-row{
+    position: relative;
+    background: orange;
+}
+
 .cell {
     border: 1px solid black;
     background: transparent;
     font-size: 20px;
     font-weight: bold;
-}
-
-.cell:nth-child(3n+3){
-    border-right: 4px solid black;
 }
 
 // Active cell to input number
