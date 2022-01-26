@@ -17,17 +17,19 @@ $active-color: rgb(172, 218, 255);
     grid-template: repeat(9,11.111111111111%) / repeat(9,11.111111111111%);
   }
 
-.cell-row{
-    position: relative;
-    background: orange;
-}
-
+// Individual squares
 .cell {
     border: 1px solid black;
     background: transparent;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+}
+
+// Active cell to input number
+.cell:focus{
+    background: $active-color;
+    outline: transparent;
 }
 
 // Setting Right Border
@@ -56,15 +58,4 @@ $bottom-border:  c73, c74, c75, c76, c77, c78, c79, c80, c81;
     ##{$id}{
         border-bottom: 0.2em solid black;
     }
-}
-
-// Active cell to input number
-.cell:focus{
-    background: $active-color;
-    outline: transparent;
-}
-
-// Active cell based on keyboard input
-.active{
-    background: orange;
 }
