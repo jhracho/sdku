@@ -4,12 +4,37 @@ $crossword-row-count: 9;
 
 $active-color: rgb(172, 218, 255);
 
-.board-container{
-    position: relative;
+@mixin center($width: null, $height: null) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    @if not $width and not $height {
+        transform: translate(-50%, -50%);
+    } 
+    @else if $width and $height {
+        width: $width;
+        height: $height;
+        margin: -($width / 2) #{0 0} -($height / 2);
+    } 
+    @else if not $height {
+        width: $width;
+        margin-left: -($width / 2);
+        transform: translateY(-50%);
+    } 
+    @else {
+        height: $height;
+        margin-top: -($height / 2);
+        transform: translateX(-50%);
+    }
+}
+
+#board-container{
+    @include center;
     background: white;
 }
 
-.board {
+#board {
     width: ($crossword-item-size * $crossword-column-count);
 	height: ($crossword-item-size * $crossword-row-count);
     background: transparent;
