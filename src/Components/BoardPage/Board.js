@@ -12,12 +12,12 @@ const Board = () =>{
                     '6','1','-','2','-','-','8','-','-',
                     '-','-','-','9','-','8','5','-','2'];
     return(
-        <div className="board">
-           {
-               puzzle.map((char, index) =>
-                    <Cell key={index} id={index} char={char}/>
-               )
-           } 
+        <div id="board">
+                {
+                    puzzle.map((char, index) =>
+                            <Cell key={index} id={index} char={char}/>
+                    )
+                }
         </div> 
     )   
 };

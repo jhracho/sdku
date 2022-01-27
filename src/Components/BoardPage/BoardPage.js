@@ -1,10 +1,14 @@
 import React from "react";
-import Board from './Board';
+import Puzzle from "./Puzzle";
+import NavBar from "./NavBar";
+import Timer from "./Timer";
 
 const BoardPage = () =>{
     return (
-        <div className="board-container">
-            <Board />
+        <div>
+            <NavBar />
+            <Timer />
+            <Puzzle />
         </div>
     );
 }
