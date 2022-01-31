@@ -1,14 +1,15 @@
-import React from "react";
+import React, {Fragment} from "react";
 import Puzzle from "./Puzzle";
-import NavBar from "./NavBar";
+import Switch from "./Switch";
 import Timer from "./Timer";
 
 const BoardPage = () =>{
     return (
         <div>
-            <NavBar />
+            <Switch />
             <Timer />
             <Puzzle />
+            <script src="../Services/ThemeService.js"></script>
         </div>
     );
 }

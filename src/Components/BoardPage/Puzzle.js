@@ -7,7 +7,7 @@ import { checkAnswer } from "../../Services/AnswerService.js";
 const Puzzle = () =>{
     return (
         <div id="board-container">
-            <form onSubmit={checkAnswer}>
+            <form onSubmit={checkAnswer} autoComplete="off">
                 <Board />
                 <Submit />
             </form>
