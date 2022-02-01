@@ -65,4 +65,7 @@ export const NumFill = (event) =>{
 
         document.getElementById('c' + num).focus();   
     }   
+    else{
+        alert('invalid input');
+    }
 };
