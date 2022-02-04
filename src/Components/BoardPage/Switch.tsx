@@ -1,9 +1,9 @@
-import React from "react";
-import {ChangeTheme} from "../../Services/ThemeService.js";
+import React, {FC} from 'react';
+import { ChangeTheme } from '../../Services/ThemeService';
 
-const Switch = () =>{
+const Switch: FC = () =>{
     return(
-        <div class="theme-switch-wrapper">
+        <div className="theme-switch-wrapper">
             <label className="theme-switch" htmlFor="checkbox">
                 <input type="checkbox" id="checkbox" onClick={ChangeTheme}/>
                 <div className="slider round"></div>
@@ -11,6 +11,6 @@ const Switch = () =>{
             <em>Enable Dark Mode!</em>
         </div>
     );
-}
+};
 
 export default Switch;

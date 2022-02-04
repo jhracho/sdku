@@ -1,7 +1,7 @@
-import React from "react";
+import React, {FC} from "react";
 import Cell from "./Cell";
 
-const Board = () =>{
+const Board: FC = () =>{
     const puzzle = ['1','9','1','3','-','2','-','-','-',
                     '-','-','3','-','-','7','-','4','5',
                     '-','-','7','-','-','-','-','-','9',
@@ -12,14 +12,14 @@ const Board = () =>{
                     '6','1','-','2','-','-','8','-','-',
                     '-','-','-','9','-','8','5','-','2'];
     return(
-        <div id="board">
-                {
-                    puzzle.map((char, index) =>
-                            <Cell key={index} id={index} char={char}/>
-                    )
-                }
-        </div> 
-    )   
+        <div id='board'>
+            {
+                puzzle.map((char, index) =>
+                    <Cell key={index} id={index} char={char}/>
+                )
+            }
+        </div>
+    );
 };
 
 export default Board;

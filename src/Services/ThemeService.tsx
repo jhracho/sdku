@@ -1,4 +1,4 @@
-export const ChangeTheme = (event) =>{
+export function ChangeTheme() {
     var currState = document.documentElement.getAttribute('data-theme');
 
     if (currState == null || currState === 'light'){ 
@@ -11,7 +11,9 @@ export const ChangeTheme = (event) =>{
     }
 };
 
-export const GetTheme = () =>{
+export function GetTheme(){
     var theme = window.localStorage.getItem('theme');
-    document.documentElement.setAttribute('data-theme', theme);
+    if (theme){ 
+        document.documentElement.setAttribute('data-theme', theme);
+    }
 };

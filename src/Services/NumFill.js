@@ -4,7 +4,8 @@ export const NumFill = (event) =>{
     const ele = document.activeElement.id;
     const numRows = 9;
 
-    if (event.which >= 48 && event.which <= 57){
+    // Event for when user enters a number 1-9
+    if (event.which > 48 && event.which <= 57){
         var num = parseInt(ele.substring(1))+1;
         if (num === 82){
             num = 1;
@@ -21,6 +22,7 @@ export const NumFill = (event) =>{
         document.getElementById(test).focus();
     }
 
+    // Event for when user presses arrow key
     else if (event.which >= 37 && event.which <= 40){
         var start = parseInt(ele.substring(1));
 
@@ -64,7 +66,9 @@ export const NumFill = (event) =>{
         }
 
         document.getElementById('c' + num).focus();   
-    }   
+    }  
+
+    //TODO: char input
     else{
         alert('invalid input');
     }
