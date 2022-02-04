@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Grabs puzzle input for cross-referencing
 export const checkAnswer = (event) => {

@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Styles/index.scss';
-import "./Styles/switch.scss";
+import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import './Styles/index.scss';
+import './Styles/switch.scss';
 
 ReactDOM.render(
   <React.StrictMode>
