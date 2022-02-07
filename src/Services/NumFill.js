@@ -5,7 +5,7 @@ export const NumFill = (event) =>{
     const numRows = 9;
 
     // Event for when user enters a number 1-9
-    if (event.which > 48 && event.which <= 57){
+    if ((event.which > 48 && event.which <= 57) || (event.which > 96 && event.which <= 105)){
         var num = parseInt(ele.substring(1))+1;
         if (num === 82){
             num = 1;
@@ -68,8 +68,22 @@ export const NumFill = (event) =>{
         document.getElementById('c' + num).focus();   
     }  
 
-    //TODO: char input
-    else{
-        alert('invalid input');
+    // Event where user presses backspace
+    else if (event.which === 8){
+        var num = parseInt(ele.substring(1))-1;
+        if (num === 0){ num = 81; }
+        while (document.getElementById('c'+ num).classList.contains('prefill')){
+            num -= 1;
+            if (num === 0) { num = 81; }
+        }
+        document.getElementById('c' + num).focus();
     }
+
+    //TODO: char input
+    else if (event.which >= 65 && event.which <= 90){
+        alert('invalid input');
+        document.getElementById('c' + num).value = '';
+    }
+
+    else{}
 };

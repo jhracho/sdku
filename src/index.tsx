@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './Styles/index.scss';
 import './Styles/switch.scss';
+import './Styles/nav.scss';
 
 ReactDOM.render(
   <React.StrictMode>
