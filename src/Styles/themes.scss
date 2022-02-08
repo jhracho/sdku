@@ -1,0 +1,19 @@
+// Default theme
+:root{
+    --backgorund-color: #f5f5f5;
+    --active-color: rgb(172, 255, 183);
+    --border-color: black;
+    --cell-color: white;
+    --prefill-color: rgb(224, 224, 224);
+    --num-color: black;
+}
+
+// Dark theme
+[data-theme=dark]{
+    --background-color: #171717;
+    --active-color: rgb(172, 218, 255);
+    --border-color: #EDEDED;
+    --cell-color: #333333;
+    --prefill-color: #646464;
+    --num-color: #EDEDED;
+}
