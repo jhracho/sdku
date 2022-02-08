@@ -1,11 +1,17 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import Puzzle from './Puzzle';
 import Switch from './Switch';
 import Nav from '../Nav/Nav';
 
+import { GetTheme } from '../../Services/ThemeService';
+
 const BoardPage: FC = () =>{
+    useEffect(() =>{
+        GetTheme();
+    }, []);
+
     return(
-        <div>
+        <div className=''>
             <Nav />
             <Switch />
             <Puzzle />
