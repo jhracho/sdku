@@ -1,3 +1,9 @@
-.intro{
+@import 'index.scss';
+
+.landing-page-container{
+    @include center;
+    text-align: center;
     z-index: 999;
+    font-family: $poppins;
+    color: var(--num-color);
 }
