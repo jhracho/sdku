@@ -1,13 +1,5 @@
 @import 'themes.scss';
 
-$crossword-item-size: 50px;
-$crossword-column-count: 9;
-$crossword-row-count: 9;
-
-body{
-    background: var(--background-color);
-}
-
 @mixin center($width: null, $height: null) {
     position: absolute;
     top: 50%;
@@ -30,90 +22,5 @@ body{
         height: $height;
         margin-top: -($height / 2);
         transform: translateX(-50%);
-    }
-}
-
-.blur{
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    @include center;
-}
-
-#board-container{
-    @include center;
-    background: transparent;
-}
-
-#board {
-    width: ($crossword-item-size * $crossword-column-count);
-	height: ($crossword-item-size * $crossword-row-count);
-    background: transparent;
-    display: grid; 
-    grid-template: repeat(9,11.111111111111%) / repeat(9,11.111111111111%);
-  }
-
-// Individual squares
-.cell {
-    border: 1px solid var(--border-color);
-    background: transparent;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    color: var(--num-color);
-    background: var(--cell-color);
-}
-
-// Active cell to input number
-.cell:focus{
-    background: var(--active-color);
-    outline: transparent;
-}
-
-// Changing pre-filled cell
-.prefill{
-    background: var(--prefill-color);
-}
-
-.prefill::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: var(--border-color);
-    opacity: 1; /* Firefox */
-}
-  
-.prefill:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: var(--border-color);
-}
-
-.prefill::-ms-input-placeholder { /* Microsoft Edge */
-    color: var(--border-color);
-}
-
-// Setting Right Border
-.cell:nth-child(3n+3){
-    border-right: 0.2em solid var(--border-color);
-}
-
-$left-border: c1, c10, c19, c28, c37, c46, c55, c64, c73;
-@each $id in $left-border{
-    ##{$id}{
-        border-left: 0.2em solid var(--border-color);
-    }
-}
-
-$top-border: c1, c2, c3, c4, c5, c6, c7, c8, c9,
-c28, c29, c30, c31, c32, c33, c34, c35, c36,
-c55, c56, c57, c58, c59, c60, c61, c62, c63;
-@each $id in $top-border{
-    ##{$id}{
-        border-top: 0.2em solid var(--border-color);
-    }
-}
-
-$bottom-border:  c73, c74, c75, c76, c77, c78, c79, c80, c81;
-@each $id in $bottom-border{
-    ##{$id}{
-        border-bottom: 0.2em solid var(--border-color);
     }
 }

@@ -11,7 +11,7 @@ const BoardPage: FC = () =>{
     }, []);
 
     return(
-        <div className=''>
+        <div id='board-page-container' className='blur'>
             <Nav />
             <Switch />
             <Puzzle />

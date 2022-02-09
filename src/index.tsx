@@ -4,9 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import './Styles/index.scss';
+import './Styles/board.scss';
+import './Styles/landing.scss';
 import './Styles/switch.scss';
 import './Styles/nav.scss';
+
 
 ReactDOM.render(
   <React.StrictMode>
