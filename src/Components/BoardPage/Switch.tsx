@@ -8,7 +8,7 @@ const Switch: FC = () =>{
                 <input type="checkbox" id="checkbox" onClick={ChangeTheme}/>
                 <div className="slider round"></div>
             </label>
-            <em>Enable Dark Mode!</em>
+            <em id='label-text'>Enable Dark Mode!</em>
         </div>
     );
 };
