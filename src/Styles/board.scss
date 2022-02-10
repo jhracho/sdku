@@ -92,3 +92,20 @@ $bottom-border:  c73, c74, c75, c76, c77, c78, c79, c80, c81;
         border-bottom: 0.2em solid var(--border-color);
     }
 }
+
+#check-puzzle-button{
+    @include center;
+    top: 110%;
+    font-family: $poppins;
+    background-color: var(--button-color); /* Green */
+    border: none;
+    color: white;
+    padding: 0.25em 0.5em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#check-puzzle-button:hover{
+    cursor: pointer;
+}
