@@ -1,14 +1,14 @@
 import React, {FC} from 'react';
-import Menu from './Menu';
+import Switch from './Switch';
 
 const Nav: FC = () =>{
     return(
         <div className='navbar'>
             <div className='nav-container'>
+                <Switch />
                 <div className='title'>
                     <h1>SDKU</h1>
                 </div>
-                <Menu />
             </div>
         </div>
     );
