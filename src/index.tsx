@@ -8,6 +8,7 @@ import './Styles/board.scss';
 import './Styles/landing.scss';
 import './Styles/switch.scss';
 import './Styles/nav.scss';
+import './Styles/rankings.scss';
 
 
 ReactDOM.render(
