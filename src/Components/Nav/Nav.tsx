@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import Switch from './Switch';
+import RankButton from './RankButton';
 
 const Nav: FC = () =>{
     return(
@@ -9,6 +10,7 @@ const Nav: FC = () =>{
                 <div className='title'>
                     <h1>SDKU</h1>
                 </div>
+                <RankButton />
             </div>
         </div>
     );
