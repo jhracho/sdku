@@ -1,1 +1,49 @@
 @import 'index.scss';
+
+#leaderboard-container{
+    @include center;
+    visibility: hidden;
+    font-family: $poppins;
+    background-color: var(--backgorund-color);
+    width: 18em;
+    height: 28em;
+}
+
+#leaderboard-container h1{
+    text-align: center;
+}
+
+#leaderboard-container button{
+    position: absolute;
+    top: 3%;
+    left: 85%;
+}
+
+#leaderboard-container button:hover{
+    cursor: pointer;
+}
+
+.leaderboard{
+    background: var(--ranking-color);
+    height: 18em;
+    margin: 0 0.5em;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar{
+    width: 0.35em;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--ranking-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 0.3em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #555;
+}
