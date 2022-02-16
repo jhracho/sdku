@@ -3,7 +3,7 @@ import Leaderboard from './Leaderboard';
 import YourRanking from './YourRanking';
 import { RankHide } from '../../Services/RankService';
 
-const RankingPage: FC = () =>{
+const LeaderboardPage: FC = () =>{
     return(
         <div id='leaderboard-container'>
             <button onClick={RankHide}>&#10005;</button>
@@ -14,4 +14,4 @@ const RankingPage: FC = () =>{
     );  
 };
 
-export default RankingPage;
+export default LeaderboardPage;
