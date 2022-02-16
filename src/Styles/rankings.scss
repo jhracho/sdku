@@ -31,19 +31,19 @@
     overflow-y: auto;
 }
 
-::-webkit-scrollbar{
+.leaderboar::-webkit-scrollbar{
     width: 0.35em;
 }
 
-::-webkit-scrollbar-track{
+.leaderboard::-webkit-scrollbar-track{
     background: var(--ranking-color);
 }
 
-::-webkit-scrollbar-thumb{
+.leaderboard::-webkit-scrollbar-thumb{
     background: #888;
     border-radius: 0.3em;
 }
 
-::-webkit-scrollbar-thumb:hover{
+.leaderboard::-webkit-scrollbar-thumb:hover{
     background: #555;
 }

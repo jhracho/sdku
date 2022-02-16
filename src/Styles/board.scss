@@ -109,3 +109,16 @@ $bottom-border:  c73, c74, c75, c76, c77, c78, c79, c80, c81;
 #check-puzzle-button:hover{
     cursor: pointer;
 }
+
+.timer-container{
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    transform: translateX(-50%);
+}
+
+.timer-container h1{
+    font-family: $poppins;
+    font-size: 2.25em;
+    color: var(--num-color);
+}
