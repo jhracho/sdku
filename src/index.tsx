@@ -10,7 +10,6 @@ import './Styles/switch.scss';
 import './Styles/nav.scss';
 import './Styles/rankings.scss';
 
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
