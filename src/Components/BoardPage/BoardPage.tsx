@@ -5,7 +5,11 @@ import Timer from './Timer';
 
 import { GetTheme } from '../../Services/ThemeService';
 
-const BoardPage: FC = () =>{
+interface BoardProps{
+    time: number; 
+}
+
+const BoardPage: FC<BoardProps> = ({time}) =>{
     useEffect(() =>{
         GetTheme();
     }, []);
@@ -13,7 +17,7 @@ const BoardPage: FC = () =>{
     return(
         <div id='board-page-container' className='blur'>
             <Nav />
-            <Timer />
+            <Timer time={time}/>
             <Puzzle />
         </div>
     );

@@ -1,9 +1,21 @@
 import React, {FC} from 'react';
 
-const Timer: FC = () =>{
+interface TimerProps{
+    //time: Dispatch<SetStateAction<any>>;
+    time: number;
+}
+
+const Timer: FC<TimerProps> = ({time}) =>{
+    const formatTime = () =>{
+        const getSeconds = `0${(time % 60)}`.slice(-2)
+        const minutes = `${Math.floor(time / 60)}`
+        const getMinutes = `0${(Math.floor(time / 60)) % 60}`.slice(-2)
+        return `${getMinutes} : ${getSeconds}`
+    }
+
     return(
         <div className='timer-container'>
-            <h1 id='timer-text'>00:00:00</h1>
+            <h1 id='timer-text'>{formatTime()}</h1>
         </div>
     )
 };
