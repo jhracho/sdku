@@ -1,7 +1,11 @@
 import React, {FC} from 'react';
 import { StartSession } from '../../Services/StartSession';
 
-const LandingPage: FC = () =>{
+interface LandingProps{
+    handle: () => void;
+}
+
+const LandingPage: FC<LandingProps> = ({handle}) =>{
     return(
         <div className ='landing-page-container' id ='landing-page-container'>
             <div className='text'>
@@ -11,7 +15,10 @@ const LandingPage: FC = () =>{
                 <h2>fast as possible.</h2>
             </div>
             <div className='button'>
-                <button onClick={StartSession}>Start</button>
+                <button onClick={ () =>{
+                    StartSession();
+                    handle();
+                }}>Start</button>
             </div>
         </div>  
     );
